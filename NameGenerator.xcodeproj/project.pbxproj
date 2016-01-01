@@ -10,6 +10,10 @@
 		1E6C0C711C2C75370087647A /* NameGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6C0C701C2C75370087647A /* NameGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E6C0C781C2C75370087647A /* NameGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C0C6D1C2C75370087647A /* NameGenerator.framework */; };
 		1E6C0C7D1C2C75370087647A /* NameGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C0C7C1C2C75370087647A /* NameGeneratorTests.swift */; };
+		1E6C0C881C2C76120087647A /* NameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C0C871C2C76120087647A /* NameGenerator.swift */; };
+		1E73C5801C36FD0C008AFF23 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73C57F1C36FD0C008AFF23 /* Token.swift */; };
+		1E73C5821C36FD20008AFF23 /* String+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73C5811C36FD20008AFF23 /* String+Token.swift */; };
+		1E73C5841C36FD34008AFF23 /* Int+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73C5831C36FD34008AFF23 /* Int+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		1E6C0C771C2C75370087647A /* NameGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NameGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6C0C7C1C2C75370087647A /* NameGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameGeneratorTests.swift; sourceTree = "<group>"; };
 		1E6C0C7E1C2C75370087647A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E6C0C871C2C76120087647A /* NameGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameGenerator.swift; sourceTree = "<group>"; };
+		1E73C57F1C36FD0C008AFF23 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		1E73C5811C36FD20008AFF23 /* String+Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Token.swift"; sourceTree = "<group>"; };
+		1E73C5831C36FD34008AFF23 /* Int+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,10 @@
 			children = (
 				1E6C0C701C2C75370087647A /* NameGenerator.h */,
 				1E6C0C721C2C75370087647A /* Info.plist */,
+				1E6C0C871C2C76120087647A /* NameGenerator.swift */,
+				1E73C5831C36FD34008AFF23 /* Int+Random.swift */,
+				1E73C5811C36FD20008AFF23 /* String+Token.swift */,
+				1E73C57F1C36FD0C008AFF23 /* Token.swift */,
 			);
 			path = NameGenerator;
 			sourceTree = "<group>";
@@ -194,6 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E73C5821C36FD20008AFF23 /* String+Token.swift in Sources */,
+				1E6C0C881C2C76120087647A /* NameGenerator.swift in Sources */,
+				1E73C5841C36FD34008AFF23 /* Int+Random.swift in Sources */,
+				1E73C5801C36FD0C008AFF23 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +324,7 @@
 		1E6C0C821C2C75370087647A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +335,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.jasonlarsen.NameGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1E6C0C831C2C75370087647A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +395,7 @@
 				1E6C0C831C2C75370087647A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E6C0C841C2C75370087647A /* Build configuration list for PBXNativeTarget "NameGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +404,7 @@
 				1E6C0C861C2C75370087647A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
